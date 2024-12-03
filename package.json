@@ -1,0 +1,27 @@
+{
+  "name": "advent-of-code-2024",
+  "version": "1.0.0",
+  "description": "advent of code 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nkrumahthis/advent-of-code-2024.git"
+  },
+  "keywords": [
+    "adventOfCode",
+    "typescript",
+    "algorithms"
+  ],
+  "author": "Emmanuel Nkrumah-Sarpong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkrumahthis/advent-of-code-2024/issues"
+  },
+  "homepage": "https://github.com/nkrumahthis/advent-of-code-2024#readme",
+  "devDependencies": {
+    "@types/node": "^22.10.1"
+  }
+}
