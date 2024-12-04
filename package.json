@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/nkrumahthis/advent-of-code-2024#readme",
   "devDependencies": {
+    "@types/bun": "^1.1.14",
     "@types/node": "^22.10.1"
   }
 }
