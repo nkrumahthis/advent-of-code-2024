@@ -1,4 +1,5 @@
 import { readFileSync } from "fs";
+import { isNull } from "util";
 
 const testData = `190: 10 19
 3267: 81 40 27
@@ -22,7 +23,7 @@ const equations = data.split("\n").map((line) => {
 });
 
 function generateOperatorCombinations(numOperators: number): string[][] {
-	const operators = ["+", "*"];
+	const operators = ["+", "*", "||"]; // "||" added in part 2
 	const combinations: string[][] = [];
 
 	const generate = (current: string[]) => {
@@ -50,7 +51,9 @@ function evaluate(numbers, operators): number {
 			result += numbers[i + 1];
 		} else if (operators[i] === "*") {
 			result *= numbers[i + 1];
-		}
+		} else if (operators[i] === "||") { // added in part 2
+            result = Number(result.toString() + numbers[i + 1]);
+        }
 	}
 
 	return result;
@@ -59,6 +62,7 @@ function evaluate(numbers, operators): number {
 let totalCalibrationResult = 0;
 for (const { value, numbers } of equations) {
 	const combinations = generateOperatorCombinations(numbers.length - 1);
+
 	for (const combination of combinations) {
 		const result = evaluate(numbers, combination);
 		if (result === value) {
