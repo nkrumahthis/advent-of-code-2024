@@ -1,5 +1,4 @@
 import { readFileSync } from "fs";
-import { isNull } from "util";
 
 const testData = `190: 10 19
 3267: 81 40 27
